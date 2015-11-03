@@ -1,5 +1,6 @@
 .clock {
     width: 300px;
+    height: auto;
     margin: 25px auto;
     position: relative;
 }
