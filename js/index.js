@@ -24,8 +24,8 @@ function drawScene() {
     hours = hours > 12 ? hours - 12 : hours;
     var hour = hours + minutes / 60;
     var minute = minutes + seconds/60;
-
     ctx.save();
+    
     ctx.translate(clockRadius, clockRadius);
     
     ctx.strokeStyle = fc;
@@ -52,8 +52,8 @@ function drawScene() {
         var y = clockRadius * 0.8 * Math.sin(theta);
         ctx.fillText(n, x, y);
     }
-    
     ctx.save();
+    
     var thetato = (hour - 3) * (2/12 * Math.PI);
     ctx.rotate(thetato);
     ctx.beginPath();
