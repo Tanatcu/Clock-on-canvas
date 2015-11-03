@@ -52,6 +52,7 @@ function drawScene() {
         var y = clockRadius * 0.8 * Math.sin(theta);
         ctx.fillText(n, x, y);
     }
+    
     ctx.save();
     var thetato = (hour - 3) * (2/12 * Math.PI);
     ctx.rotate(thetato);
@@ -96,6 +97,9 @@ $(function() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
     clockRadius = canvas.width/2;
+    
+    canvas.width = 300;
+    canvas.height = 300;
 
     setInterval(drawScene, 1000);
 });
