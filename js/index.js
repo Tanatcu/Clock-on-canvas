@@ -37,7 +37,6 @@ function drawScene() {
     
     ctx.restore();
     ctx.beginPath();
-    //ctx.strokeStyle = fc;
     ctx.lineWidth = '60';
     ctx.arc(0,0,clockRadius*0.8,0,2*Math.PI);
     ctx.stroke();
@@ -55,7 +54,6 @@ function drawScene() {
     }
     ctx.closePath();
 
-    //ctx.save();
     var thetato = (hour - 3) * 2 / 12 * Math.PI ;
     ctx.rotate(thetato);
     ctx.beginPath();
@@ -66,9 +64,7 @@ function drawScene() {
     ctx.closePath();
     ctx.fillStyle = hmc;
     ctx.fill();
-    //ctx.restore();
-
-    //ctx.save();
+    
     var thet = (minute - 15) * 2 / 60 * Math.PI;
     ctx.rotate(thet);
     ctx.beginPath();
@@ -79,9 +75,7 @@ function drawScene() {
     ctx.closePath();
     ctx.fillStyle = hmc;
     ctx.fill();
-    //ctx.restore();
-
-    //ctx.save();
+ 
     var the = (seconds - 15) * 2 / 60 * Math.PI;
     ctx.rotate(the);
     ctx.beginPath();
@@ -93,7 +87,6 @@ function drawScene() {
     ctx.fillStyle = sc;
     ctx.fill();
     ctx.restore();
-    //ctx.restore();
 }
 $(function() {
     canvas = document.getElementById('canvas');
