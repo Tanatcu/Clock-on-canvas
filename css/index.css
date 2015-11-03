@@ -1,10 +1,10 @@
 .clock {
     width: 300px;
-    height: auto;
+    //height: auto;
     margin: 25px auto;
     position: relative;
 }
 input {
-    width: 120px;
+    width: 25%;
     float:right;
 }

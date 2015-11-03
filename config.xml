@@ -4,8 +4,8 @@
     <description>
        The first test application framework, written in phonegap.
     </description>
-    <author email="ruslan.iuko777@mail.ru" href="http://cordova.io">
-        Solo
+    <author email="ruslan.iuko777@mail.ru" href="https://vk.com/tanatcu">
+        Ruslan
     </author>
     <content src="index.html"/>
     <plugin name="org.apache.cordova.battery-status"/>
