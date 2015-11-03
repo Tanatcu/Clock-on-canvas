@@ -16,7 +16,7 @@ function clear() {
 function drawScene() {
     clear();
     getcolor();
-
+    
     var date = new Date();
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -33,9 +33,11 @@ function drawScene() {
     ctx.lineWidth = '30';
     ctx.arc(0,0,clockRadius*0.3,0,2*Math.PI);
     ctx.stroke();
+    ctx.save();
     
+    ctx.restore();
     ctx.beginPath();
-    ctx.strokeStyle = fc;
+    //ctx.strokeStyle = fc;
     ctx.lineWidth = '60';
     ctx.arc(0,0,clockRadius*0.8,0,2*Math.PI);
     ctx.stroke();
@@ -65,10 +67,7 @@ function drawScene() {
     ctx.fillStyle = hmc;
     ctx.fill();
     //ctx.restore();
-    
-    
-    
-    
+
     //ctx.save();
     var thet = (minute - 15) * 2 / 60 * Math.PI;
     ctx.rotate(thet);
@@ -93,13 +92,14 @@ function drawScene() {
     ctx.closePath();
     ctx.fillStyle = sc;
     ctx.fill();
-    //ctx.restore();
     ctx.restore();
+    //ctx.restore();
 }
 $(function() {
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
     clockRadius = canvas.width/2;
+    console.log(clockRadius);
 
     setInterval(drawScene, 1000);
 });
